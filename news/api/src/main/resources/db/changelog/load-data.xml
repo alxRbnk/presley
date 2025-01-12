@@ -1,0 +1,1111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="2news" author="AlxRbnk">
+        <insert tableName="news">
+            <column name="title" value="News 1"/>
+            <column name="text" value="Some news text here..."/>
+        </insert>
+        <insert tableName="news">
+            <column name="title" value="News 2"/>
+            <column name="text" value="Some news text here..."/>
+        </insert>
+        <insert tableName="news">
+            <column name="title" value="News 3"/>
+            <column name="text" value="Another interesting news content..."/>
+        </insert>
+        <insert tableName="news">
+            <column name="title" value="News 4"/>
+            <column name="text" value="Breaking news about something exciting..."/>
+        </insert>
+        <insert tableName="news">
+            <column name="title" value="News 5"/>
+            <column name="text" value="Latest updates on the topic of the day..."/>
+        </insert>
+        <insert tableName="news">
+            <column name="title" value="News 6"/>
+            <column name="text" value="Important development in the industry..."/>
+        </insert>
+        <insert tableName="news">
+            <column name="title" value="News 7"/>
+            <column name="text" value="Global event creating significant attention..."/>
+        </insert>
+        <insert tableName="news">
+            <column name="title" value="News 8"/>
+            <column name="text" value="Technology breakthrough happening this week..."/>
+        </insert>
+        <insert tableName="news">
+            <column name="title" value="News 9"/>
+            <column name="text" value="Political shifts in the latest reports..."/>
+        </insert>
+        <insert tableName="news">
+            <column name="title" value="News 10"/>
+            <column name="text" value="Sports update: Major victories this season..."/>
+        </insert>
+        <insert tableName="news">
+            <column name="title" value="News 11"/>
+            <column name="text" value="Entertainment industry sees a new trend..."/>
+        </insert>
+        <insert tableName="news">
+            <column name="title" value="News 12"/>
+            <column name="text" value="Climate change discussion is gaining momentum..."/>
+        </insert>
+        <insert tableName="news">
+            <column name="title" value="News 13"/>
+            <column name="text" value="World economy outlook for the next decade..."/>
+        </insert>
+        <insert tableName="news">
+            <column name="title" value="News 14"/>
+            <column name="text" value="Local news: Community efforts succeeding..."/>
+        </insert>
+        <insert tableName="news">
+            <column name="title" value="News 15"/>
+            <column name="text" value="Upcoming conference to change the industry..."/>
+        </insert>
+        <insert tableName="news">
+            <column name="title" value="News 16"/>
+            <column name="text" value="New educational policy announced..."/>
+        </insert>
+        <insert tableName="news">
+            <column name="title" value="News 17"/>
+            <column name="text" value="Health trends to watch in the coming year..."/>
+        </insert>
+        <insert tableName="news">
+            <column name="title" value="News 18"/>
+            <column name="text" value="Innovation driving future economic growth..."/>
+        </insert>
+        <insert tableName="news">
+            <column name="title" value="News 19"/>
+            <column name="text" value="Latest tech conference reveals groundbreaking ideas..."/>
+        </insert>
+        <insert tableName="news">
+            <column name="title" value="News 20"/>
+            <column name="text" value="New cultural movement gaining global recognition..."/>
+        </insert>
+    </changeSet>
+
+    <changeSet id="3news" author="AlxRbnk">
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 1 for News 1"/>
+            <column name="news_id" value="1"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 2 for News 1"/>
+            <column name="news_id" value="1"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 3 for News 1"/>
+            <column name="news_id" value="1"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 4 for News 1"/>
+            <column name="news_id" value="1"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 5 for News 1"/>
+            <column name="news_id" value="1"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 6 for News 1"/>
+            <column name="news_id" value="1"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 7 for News 1"/>
+            <column name="news_id" value="1"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 8 for News 1"/>
+            <column name="news_id" value="1"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 9 for News 1"/>
+            <column name="news_id" value="1"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 10 for News 1"/>
+            <column name="news_id" value="1"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 1 for News 2"/>
+            <column name="news_id" value="2"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 2 for News 2"/>
+            <column name="news_id" value="2"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 3 for News 2"/>
+            <column name="news_id" value="2"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 4 for News 2"/>
+            <column name="news_id" value="2"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 5 for News 2"/>
+            <column name="news_id" value="2"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 6 for News 2"/>
+            <column name="news_id" value="2"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 7 for News 2"/>
+            <column name="news_id" value="2"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 8 for News 2"/>
+            <column name="news_id" value="2"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 9 for News 2"/>
+            <column name="news_id" value="2"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 10 for News 2"/>
+            <column name="news_id" value="2"/>
+        </insert>
+
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 1 for News 3"/>
+            <column name="news_id" value="3"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 2 for News 3"/>
+            <column name="news_id" value="3"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 3 for News 3"/>
+            <column name="news_id" value="3"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 4 for News 3"/>
+            <column name="news_id" value="3"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 5 for News 3"/>
+            <column name="news_id" value="3"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 6 for News 3"/>
+            <column name="news_id" value="3"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 7 for News 3"/>
+            <column name="news_id" value="3"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 8 for News 3"/>
+            <column name="news_id" value="3"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 9 for News 3"/>
+            <column name="news_id" value="3"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 10 for News 3"/>
+            <column name="news_id" value="3"/>
+        </insert>
+
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 1 for News 4"/>
+            <column name="news_id" value="4"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 2 for News 4"/>
+            <column name="news_id" value="4"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 3 for News 4"/>
+            <column name="news_id" value="4"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 4 for News 4"/>
+            <column name="news_id" value="4"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 5 for News 4"/>
+            <column name="news_id" value="4"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 6 for News 4"/>
+            <column name="news_id" value="4"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 7 for News 4"/>
+            <column name="news_id" value="4"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 8 for News 4"/>
+            <column name="news_id" value="4"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 9 for News 4"/>
+            <column name="news_id" value="4"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 10 for News 4"/>
+            <column name="news_id" value="4"/>
+        </insert>
+
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 1 for News 5"/>
+            <column name="news_id" value="5"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 2 for News 5"/>
+            <column name="news_id" value="5"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 3 for News 5"/>
+            <column name="news_id" value="5"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 4 for News 5"/>
+            <column name="news_id" value="5"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 5 for News 5"/>
+            <column name="news_id" value="5"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 6 for News 5"/>
+            <column name="news_id" value="5"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 7 for News 5"/>
+            <column name="news_id" value="5"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 8 for News 5"/>
+            <column name="news_id" value="5"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 9 for News 5"/>
+            <column name="news_id" value="5"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 10 for News 5"/>
+            <column name="news_id" value="5"/>
+        </insert>
+
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 1 for News 6"/>
+            <column name="news_id" value="6"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 2 for News 6"/>
+            <column name="news_id" value="6"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 3 for News 6"/>
+            <column name="news_id" value="6"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 4 for News 6"/>
+            <column name="news_id" value="6"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 5 for News 6"/>
+            <column name="news_id" value="6"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 6 for News 6"/>
+            <column name="news_id" value="6"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 7 for News 6"/>
+            <column name="news_id" value="6"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 8 for News 6"/>
+            <column name="news_id" value="6"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 9 for News 6"/>
+            <column name="news_id" value="6"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 10 for News 6"/>
+            <column name="news_id" value="6"/>
+        </insert>
+
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 1 for News 7"/>
+            <column name="news_id" value="7"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 2 for News 7"/>
+            <column name="news_id" value="7"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 3 for News 7"/>
+            <column name="news_id" value="7"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 4 for News 7"/>
+            <column name="news_id" value="7"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 5 for News 7"/>
+            <column name="news_id" value="7"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 6 for News 7"/>
+            <column name="news_id" value="7"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 7 for News 7"/>
+            <column name="news_id" value="7"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 8 for News 7"/>
+            <column name="news_id" value="7"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 9 for News 7"/>
+            <column name="news_id" value="7"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 10 for News 7"/>
+            <column name="news_id" value="7"/>
+        </insert>
+
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 1 for News 8"/>
+            <column name="news_id" value="8"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 2 for News 8"/>
+            <column name="news_id" value="8"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 3 for News 8"/>
+            <column name="news_id" value="8"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 4 for News 8"/>
+            <column name="news_id" value="8"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 5 for News 8"/>
+            <column name="news_id" value="8"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 6 for News 8"/>
+            <column name="news_id" value="8"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 7 for News 8"/>
+            <column name="news_id" value="8"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 8 for News 8"/>
+            <column name="news_id" value="8"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 9 for News 8"/>
+            <column name="news_id" value="8"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 10 for News 8"/>
+            <column name="news_id" value="8"/>
+        </insert>
+
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 1 for News 9"/>
+            <column name="news_id" value="9"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 2 for News 9"/>
+            <column name="news_id" value="9"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 3 for News 9"/>
+            <column name="news_id" value="9"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 4 for News 9"/>
+            <column name="news_id" value="9"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 5 for News 9"/>
+            <column name="news_id" value="9"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 6 for News 9"/>
+            <column name="news_id" value="9"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 7 for News 9"/>
+            <column name="news_id" value="9"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 8 for News 9"/>
+            <column name="news_id" value="9"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 9 for News 9"/>
+            <column name="news_id" value="9"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 10 for News 9"/>
+            <column name="news_id" value="9"/>
+        </insert>
+
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 1 for News 10"/>
+            <column name="news_id" value="10"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 2 for News 10"/>
+            <column name="news_id" value="10"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 3 for News 10"/>
+            <column name="news_id" value="10"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 4 for News 10"/>
+            <column name="news_id" value="10"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 5 for News 10"/>
+            <column name="news_id" value="10"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 6 for News 10"/>
+            <column name="news_id" value="10"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 7 for News 10"/>
+            <column name="news_id" value="10"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 8 for News 10"/>
+            <column name="news_id" value="10"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 9 for News 10"/>
+            <column name="news_id" value="10"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 10 for News 10"/>
+            <column name="news_id" value="10"/>
+        </insert>
+
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 1 for News 11"/>
+            <column name="news_id" value="11"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 2 for News 11"/>
+            <column name="news_id" value="11"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 3 for News 11"/>
+            <column name="news_id" value="11"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 4 for News 11"/>
+            <column name="news_id" value="11"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 5 for News 11"/>
+            <column name="news_id" value="11"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 6 for News 11"/>
+            <column name="news_id" value="11"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 7 for News 11"/>
+            <column name="news_id" value="11"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 8 for News 11"/>
+            <column name="news_id" value="11"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 9 for News 11"/>
+            <column name="news_id" value="11"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 10 for News 11"/>
+            <column name="news_id" value="11"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 1 for News 12"/>
+            <column name="news_id" value="112"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 2 for News 12"/>
+            <column name="news_id" value="12"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 3 for News 12"/>
+            <column name="news_id" value="12"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 4 for News 12"/>
+            <column name="news_id" value="12"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 5 for News 12"/>
+            <column name="news_id" value="12"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 6 for News 12"/>
+            <column name="news_id" value="12"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 7 for News 12"/>
+            <column name="news_id" value="12"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 8 for News 12"/>
+            <column name="news_id" value="12"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 9 for News 12"/>
+            <column name="news_id" value="12"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 10 for News 12"/>
+            <column name="news_id" value="12"/>
+        </insert>
+
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 1 for News 13"/>
+            <column name="news_id" value="13"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 2 for News 13"/>
+            <column name="news_id" value="13"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 3 for News 13"/>
+            <column name="news_id" value="13"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 4 for News 13"/>
+            <column name="news_id" value="13"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 5 for News 13"/>
+            <column name="news_id" value="13"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 6 for News 13"/>
+            <column name="news_id" value="13"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 7 for News 13"/>
+            <column name="news_id" value="13"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 8 for News 13"/>
+            <column name="news_id" value="13"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 9 for News 13"/>
+            <column name="news_id" value="13"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 10 for News 13"/>
+            <column name="news_id" value="13"/>
+        </insert>
+
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 1 for News 14"/>
+            <column name="news_id" value="14"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 2 for News 14"/>
+            <column name="news_id" value="14"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 3 for News 14"/>
+            <column name="news_id" value="14"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 4 for News 14"/>
+            <column name="news_id" value="14"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 5 for News 14"/>
+            <column name="news_id" value="14"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 6 for News 14"/>
+            <column name="news_id" value="14"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 7 for News 14"/>
+            <column name="news_id" value="14"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 8 for News 14"/>
+            <column name="news_id" value="14"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 9 for News 14"/>
+            <column name="news_id" value="14"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 10 for News 14"/>
+            <column name="news_id" value="14"/>
+        </insert>
+
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 1 for News 15"/>
+            <column name="news_id" value="15"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 2 for News 15"/>
+            <column name="news_id" value="15"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 3 for News 15"/>
+            <column name="news_id" value="15"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 4 for News 15"/>
+            <column name="news_id" value="15"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 5 for News 15"/>
+            <column name="news_id" value="15"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 6 for News 15"/>
+            <column name="news_id" value="15"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 7 for News 15"/>
+            <column name="news_id" value="15"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 8 for News 15"/>
+            <column name="news_id" value="15"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 9 for News 15"/>
+            <column name="news_id" value="15"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 10 for News 15"/>
+            <column name="news_id" value="15"/>
+        </insert>
+
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 1 for News 16"/>
+            <column name="news_id" value="16"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 2 for News 16"/>
+            <column name="news_id" value="16"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 3 for News 16"/>
+            <column name="news_id" value="16"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 4 for News 16"/>
+            <column name="news_id" value="16"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 5 for News 16"/>
+            <column name="news_id" value="16"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 6 for News 16"/>
+            <column name="news_id" value="16"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 7 for News 16"/>
+            <column name="news_id" value="16"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 8 for News 16"/>
+            <column name="news_id" value="16"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 9 for News 16"/>
+            <column name="news_id" value="16"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 10 for News 16"/>
+            <column name="news_id" value="16"/>
+        </insert>
+
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 1 for News 17"/>
+            <column name="news_id" value="17"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 2 for News 17"/>
+            <column name="news_id" value="17"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 3 for News 17"/>
+            <column name="news_id" value="17"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 4 for News 17"/>
+            <column name="news_id" value="17"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 5 for News 17"/>
+            <column name="news_id" value="17"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 6 for News 17"/>
+            <column name="news_id" value="17"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 7 for News 17"/>
+            <column name="news_id" value="17"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 8 for News 17"/>
+            <column name="news_id" value="17"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 9 for News 17"/>
+            <column name="news_id" value="17"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 10 for News 17"/>
+            <column name="news_id" value="17"/>
+        </insert>
+
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 1 for News 18"/>
+            <column name="news_id" value="18"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 2 for News 18"/>
+            <column name="news_id" value="18"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 3 for News 18"/>
+            <column name="news_id" value="18"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 4 for News 18"/>
+            <column name="news_id" value="18"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 5 for News 18"/>
+            <column name="news_id" value="18"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 6 for News 18"/>
+            <column name="news_id" value="18"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 7 for News 18"/>
+            <column name="news_id" value="18"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 8 for News 18"/>
+            <column name="news_id" value="18"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 9 for News 18"/>
+            <column name="news_id" value="18"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 10 for News 18"/>
+            <column name="news_id" value="18"/>
+        </insert>
+
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 1 for News 19"/>
+            <column name="news_id" value="19"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 2 for News 19"/>
+            <column name="news_id" value="19"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 3 for News 19"/>
+            <column name="news_id" value="19"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 4 for News 19"/>
+            <column name="news_id" value="19"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 5 for News 19"/>
+            <column name="news_id" value="19"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 6 for News 19"/>
+            <column name="news_id" value="19"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 7 for News 19"/>
+            <column name="news_id" value="19"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 8 for News 19"/>
+            <column name="news_id" value="19"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 9 for News 19"/>
+            <column name="news_id" value="19"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 10 for News 19"/>
+            <column name="news_id" value="19"/>
+        </insert>
+
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 1 for News 20"/>
+            <column name="news_id" value="20"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 2 for News 20"/>
+            <column name="news_id" value="20"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 3 for News 20"/>
+            <column name="news_id" value="20"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 4 for News 20"/>
+            <column name="news_id" value="20"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 5 for News 20"/>
+            <column name="news_id" value="20"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 6 for News 20"/>
+            <column name="news_id" value="20"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 7 for News 20"/>
+            <column name="news_id" value="20"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 8 for News 20"/>
+            <column name="news_id" value="20"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Alx"/>
+            <column name="text" value="Comment 9 for News 20"/>
+            <column name="news_id" value="20"/>
+        </insert>
+        <insert tableName="comments">
+            <column name="username" value="Bob"/>
+            <column name="text" value="Comment 10 for News 20"/>
+            <column name="news_id" value="20"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>

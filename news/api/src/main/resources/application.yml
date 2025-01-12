@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: test
+  application:
+    name: news
+token:
+  signing:
+    key: secret
+server:
+  port: 8081
+cache:
+  algorithm: LRU  #LFU
+  max-size: 100

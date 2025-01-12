@@ -1,0 +1,14 @@
+spring:
+  profiles:
+    active: test
+  application:
+    name: auth
+  security:
+    user:
+      name: root
+      password: root
+server:
+  port: 8083
+token:
+  signing:
+    key: secret
