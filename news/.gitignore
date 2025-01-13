@@ -37,3 +37,4 @@ out/
 .vscode/
 /gradle/
 /api/src/main/java/org/rbnk/api/client/forIDE
+/other/

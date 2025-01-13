@@ -1,7 +1,15 @@
+FROM gradle:8.11-jdk21 AS builder
+
+WORKDIR /app
+
+COPY . .
+
+RUN gradle build --no-daemon -x test
+
 FROM openjdk:21-jdk-slim
 
 WORKDIR /app
 
-COPY api/build/libs/api-0.0.1-SNAPSHOT.jar /app/app.jar
+COPY --from=builder app/api/build/libs/*.jar /app/app.jar
 
 ENTRYPOINT ["java", "-jar", "/app/app.jar"]
