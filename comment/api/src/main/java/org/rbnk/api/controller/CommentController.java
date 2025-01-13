@@ -1,5 +1,6 @@
 package org.rbnk.api.controller;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.rbnk.api.dto.CommentDto;
 import org.rbnk.api.mapper.CommentMapper;
@@ -48,7 +49,7 @@ public class CommentController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     @PreAuthorize(value = "hasRole('ADMIN') or hasRole('SUBSCRIBER')")
-    public void createComment(@RequestBody CommentDto dto) {
+    public void createComment(@RequestBody @Valid CommentDto dto) {
         Comment news = commentMapper.dtoToDomain(dto);
         commentService.create(news);
     }
@@ -56,7 +57,7 @@ public class CommentController {
     @PutMapping
     @ResponseStatus(HttpStatus.OK)
     @PreAuthorize(value = "hasRole('ADMIN') or hasRole('SUBSCRIBER')")
-    public void updateComment(@RequestBody CommentDto dto) {
+    public void updateComment(@RequestBody @Valid CommentDto dto) {
         Comment comment = commentMapper.dtoToDomain(dto);
         commentService.update(comment);
     }
@@ -68,7 +69,7 @@ public class CommentController {
         commentService.delete(id);
     }
 
-    @GetMapping("/news/comments")
+    @GetMapping("/news/paged")
     @ResponseStatus(HttpStatus.OK)
     @PreAuthorize(value = "permitAll()")
     public Page<CommentDto> getCommentsByNewsId(@RequestParam("newsId") Long newsId,
@@ -77,7 +78,7 @@ public class CommentController {
                 .map(commentMapper::domainToDto);
     }
 
-    @GetMapping("/news/comments/comments")
+    @GetMapping("/news/comments")
     @ResponseStatus(HttpStatus.OK)
     @PreAuthorize(value = "permitAll()")
     public List<CommentDto> getCommentsByNewsId(@RequestParam("newsId") Long newsId) {

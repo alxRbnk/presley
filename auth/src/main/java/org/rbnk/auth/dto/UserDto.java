@@ -30,6 +30,6 @@ public class UserDto {
     @Email
     private String email;
 
-    private Role role = Role.ROLE_SUBSCRIBER;
+    private Role role;
 
 }

@@ -3,6 +3,7 @@ package org.rbnk.core.service;
 import lombok.RequiredArgsConstructor;
 import org.rbnk.core.adapter.Adapter;
 import org.rbnk.core.domain.Comment;
+import org.rbnk.core.exception.CommentException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -28,11 +29,13 @@ public class CommentService {
     }
 
     public void update(Comment comment) {
+        adapter.findById(comment.getId());
         comment.setCreateAt(LocalDateTime.now());
         adapter.update(comment);
     }
 
     public void delete(Long id) {
+        adapter.findById(id);
         adapter.deleteById(id);
     }
 
@@ -40,7 +43,7 @@ public class CommentService {
         return adapter.findByNewsId(newsId, pageable);
     }
 
-    public List<Comment> getCommentsByNewsId(Long newsId){
+    public List<Comment> getCommentsByNewsId(Long newsId) {
         return adapter.findAllByNewsId(newsId);
     }
 

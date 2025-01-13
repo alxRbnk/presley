@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Slf4j
 public class LoggingAspect {
+
     @Pointcut("execution(* org.rbnk.api.controller.NewsController.*(..))")
     public void controllerMethods() {}
 

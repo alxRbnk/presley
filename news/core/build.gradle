@@ -19,3 +19,13 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+springBoot {
+    mainClass = 'org.rbnk.api.ApiNewsApplication'
+}
+bootJar {
+    mainClass = 'org.rbnk.api.ApiNewsApplication'
+}
+bootRun {
+    mainClass = 'org.rbnk.api.ApiNewsApplication'
+}

@@ -5,10 +5,12 @@ import lombok.extern.slf4j.Slf4j;
 import org.rbnk.core.adapter.Adapter;
 import org.rbnk.core.cache.CacheService;
 import org.rbnk.core.domain.News;
+import org.rbnk.core.exception.NewsException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -21,6 +23,9 @@ public class NewsService {
     private final CacheService<News> cacheService;
 
     public News getById(Long id) {
+        if (id <= 0) {
+            throw new NewsException("id must be greater than zero");
+        }
         log.info("Fetching news by id: {}", id);
         News cachedNews = cacheService.get(id);
         if (cachedNews != null) {
@@ -46,6 +51,7 @@ public class NewsService {
     }
 
     public void update(News news) {
+
         log.info("Updating news: {}", news);
         news.setCreateAt(LocalDateTime.now());
         News updatedNews = adapter.update(news);
@@ -54,6 +60,10 @@ public class NewsService {
     }
 
     public void delete(Long id) {
+        if (id <= 0) {
+            throw new NewsException("id must be greater than zero");
+        }
+        adapter.findById(id);
         log.info("Deleting news with id: {}", id);
         adapter.deleteById(id);
         cacheService.remove(id);

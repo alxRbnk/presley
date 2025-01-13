@@ -1,0 +1,114 @@
+services:
+
+  auth:
+    networks:
+      - app-network
+    build:
+      context: ./auth
+      dockerfile: Dockerfile
+    container_name: auth-service
+    ports:
+      - "8083:8083"
+    environment:
+      - SPRING_PROFILES_ACTIVE=test
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://auth-db:5432/auth_db
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+    depends_on:
+      clever:
+        condition: service_healthy
+
+  comment:
+    networks:
+      - app-network
+    build:
+      context: ./comment
+      dockerfile: Dockerfile
+    container_name: comment-service
+    ports:
+      - "8082:8082"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://clever:5432/clever
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+    depends_on:
+      clever:
+        condition: service_healthy
+
+  news:
+    networks:
+      - app-network
+    build:
+      context: ./news
+      dockerfile: Dockerfile
+    container_name: news-service
+    ports:
+      - "8081:8081"
+    environment:
+      - SPRING_PROFILES_ACTIVE=test
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://clever:5432/clever
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+    depends_on:
+      clever:
+        condition: service_healthy
+
+  gateway:
+    networks:
+      - app-network
+    build:
+      context: ./gateway
+      dockerfile: Dockerfile
+    container_name: gateway-service
+    ports:
+      - "8084:8084"
+    depends_on:
+      - auth
+      - news
+      - comment
+
+  auth-db:
+    networks:
+      - app-network
+    image: postgres:latest
+    container_name: auth_db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=auth_db
+    volumes:
+      - auth-data:/var/lib/postgresql/data
+    ports:
+      - "5434:5432"
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  clever:
+    networks:
+      - app-network
+    image: postgres:latest
+    container_name: clever
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=clever
+    volumes:
+      - news-comment-data:/var/lib/postgresql/data
+    ports:
+      - "5435:5432"
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  auth-data:
+  news-comment-data:

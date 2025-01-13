@@ -22,7 +22,7 @@ public class AdapterImpl implements Adapter {
     @Override
     public Comment findById(Long id) {
         CommentEntity entity = commentRepository.findById(id).orElseThrow(()
-                -> new CommentException("incorrect"));
+                -> new CommentException("incorrect comment id"));
         return mapper.entityToDomain(entity);
     }
 

@@ -45,3 +45,13 @@ subprojects {
 		options.annotationProcessorPath = configurations.annotationProcessor
 	}
 }
+
+springBoot {
+	mainClass = 'org.rbnk.api.ApiCommentApplication'
+}
+bootJar {
+	mainClass = 'org.rbnk.api.ApiCommentApplication'
+}
+bootRun {
+	mainClass = 'org.rbnk.api.ApiCommentApplication'
+}

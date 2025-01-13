@@ -9,6 +9,7 @@ import org.rbnk.auth.repository.UserRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -41,5 +42,11 @@ public class UserService {
                 orElseThrow(() -> new CustomAuthException("User not found"));
         user.setRole(changeRoleDto.getRole());
         userRepository.save(user);
+    }
+
+    public List<String> findAll() {
+        return userRepository.findAll().stream()
+                .map(User::getLogin)
+                .toList();
     }
 }

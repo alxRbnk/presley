@@ -1,5 +1,6 @@
 package org.rbnk.api.controller;
 
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.rbnk.api.dto.CommentDto;
 import org.rbnk.api.dto.NewsDto;
@@ -52,14 +53,14 @@ public class NewsController {
     @PostMapping("/create")
     @ResponseStatus(HttpStatus.CREATED)
     @PreAuthorize(value = "hasRole('ADMIN') or hasRole('JOURNALIST')")
-    public void createNews(@RequestBody NewsDto dto) {
+    public void createNews(@RequestBody @Valid NewsDto dto) {
         newsService.create(newsMapper.dtoToDomain(dto));
     }
 
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.OK)
     @PreAuthorize(value = "hasRole('ADMIN') or hasRole('JOURNALIST')")
-    public void updateNews(@RequestBody NewsDto dto) {
+    public void updateNews(@RequestBody @Valid NewsDto dto) {
         newsService.update(newsMapper.dtoToDomain(dto));
     }
 

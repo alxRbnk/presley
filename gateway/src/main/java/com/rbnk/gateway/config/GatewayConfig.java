@@ -13,18 +13,18 @@ public class GatewayConfig {
     @Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route("auth_service", r -> r
+                .route("auth", r -> r
                         .path("/auth/**")
-                        .uri("http://localhost:8083"))
-                .route("auth_service", r -> r
+                        .uri("http://auth-service:8083"))
+                .route("admin", r -> r
                         .path("/admin/**")
-                        .uri("http://localhost:8083"))
-                .route("comment_service", r -> r
+                        .uri("http://auth-service:8083"))
+                .route("comment", r -> r
                         .path("/comments/**")
-                        .uri("http://localhost:8082"))
-                .route("news_service", r -> r
+                        .uri("http://comment-service:8082"))
+                .route("news", r -> r
                         .path("/news/**")
-                        .uri("http://localhost:8081"))
+                        .uri("http://news-service:8081"))
                 .build();
     }
 }

@@ -46,7 +46,19 @@ subprojects {
 		testImplementation 'org.assertj:assertj-core'
 	}
 
-	tasks.withType(JavaCompile) {
-		options.annotationProcessorPath = configurations.annotationProcessor
+	tasks.withType(JavaCompile).tap {
+		configureEach {
+			options.annotationProcessorPath = configurations.annotationProcessor
+		}
 	}
+}
+
+springBoot {
+    mainClass = 'org.rbnk.api.ApiNewsApplication'
+}
+bootJar {
+    mainClass = 'org.rbnk.api.ApiNewsApplication'
+}
+bootRun {
+    mainClass = 'org.rbnk.api.ApiNewsApplication'
 }

@@ -27,7 +27,8 @@ public class AdapterImpl implements Adapter {
 
     @Override
     public News findById(Long id) {
-        NewsEntity entity = newsRepository.findById(id).orElseThrow(() -> new NewsException("incorrect"));
+        NewsEntity entity = newsRepository.findById(id)
+                .orElseThrow(() -> new NewsException("news not found"));
         return newsMapper.entityToDomain(entity);
     }
 

@@ -1,5 +1,6 @@
 package org.rbnk.api.dto;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -15,6 +16,9 @@ import org.springframework.data.domain.Page;
 @AllArgsConstructor
 @NoArgsConstructor
 public class NewsWithCommentsDto {
+    @NotNull(message = "news cannot be null")
     private NewsDto newsDto;
+
+    @NotNull(message = "comments cannot be null")
     private Page<CommentDto> comments;
 }

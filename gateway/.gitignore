@@ -36,3 +36,4 @@ out/
 ### VS Code ###
 .vscode/
 /gradle/
+/src/main/java/com/rbnk/gateway/config/forIDE
