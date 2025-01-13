@@ -85,7 +85,7 @@ public class AuthService {
                 .password(userDto.getPassword())
                 .username(userDto.getUsername())
                 .email(userDto.getEmail())
-                .role(userDto.getRole() != null ? userDto.getRole() : Role.ROLE_SUBSCRIBER)
+                .role(Role.ROLE_SUBSCRIBER)
                 .build();
     }
 }
