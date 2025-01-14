@@ -179,15 +179,15 @@
 
 **Comment сервис  8082**
 
-`GET` `http://localhost:8082/comments/1` - получение по id 1
+`GET` `http://localhost:8084/comments/1` - получение по id 1
 
-`GET` `http://localhost:8082/comments` - получение всех комментариев 
+`GET` `http://localhost:8084/comments` - получение всех комментариев 
 
-`POST` `http://localhost:8082/comments` - создание комментария (ROLE_ADMIN или ROLE_SUBSCRIBER)
+`POST` `http://localhost:8084/comments` - создание комментария (ROLE_ADMIN или ROLE_SUBSCRIBER)
 
-`PUT` `http://localhost:8082/comments` - обновление комментария (ROLE_ADMIN или ROLE_SUBSCRIBER)
+`PUT` `http://localhost:8084/comments` - обновление комментария (ROLE_ADMIN или ROLE_SUBSCRIBER)
 
-`DELETE` `http://localhost:8082/comments/22` - удаление комментария (ROLE_ADMIN или ROLE_SUBSCRIBER)
+`DELETE` `http://localhost:8084/comments/22` - удаление комментария (ROLE_ADMIN или ROLE_SUBSCRIBER)
 
 ## Запуск микросервисов 
 1. В терминале перейти в директорию с файлом `docker-compose.yml`:
