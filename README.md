@@ -1,3 +1,27 @@
+### **Описание проекта:**
+**Это RESTful для управления новостями, 
+реализующее основные функции работы с новостями и комментариями. 
+В проекте используется подход разделения на модули (api, core).**
+
+### **Основные особенности:**
+
+- Spring Boot 3.x с поддержкой последних функций.
+- Spring Security с JWT для аутентификации и авторизации пользователей.
+- Spring Data для работы с базой данных PostgreSQL.
+- Aspectj Логирование с использованием аспектного подхода.
+- FeignClient для связи между микросервисами (News, Comment).
+- Кэширование с использованием двух алгоритмов: LRU и LFU.
+- Liquibase для управления схемой базы данных и миграциями.
+- Docker для контейнеризации и запуска через файл docker-compose.
+- Реализована пагинация для новостей и 
+комментариев, а также поиск.
+- Проект разбит на модули:
+  - News (api и core) — для работы с новостями.
+  - Comment (api и core) — для работы с комментариями.
+  - Auth (1 модуль) — для работы с аутентификацией и авторизацией.
+  - Gateway — для единого входа. 
+
+
 ># Gateway
 ### Описание: Единая точка входа для всех API:
 ### **Gateway:** `port:8084`
@@ -121,17 +145,17 @@
 
 **Описание: Удаление комментария по его ID.**
 
-### **примеры запросов на единый `port 8084`:**
+## **Примеры запросов на единый `port 8084`:**
 
 **Auth сервис 8083**
 
-`POST` `http://localhost:8084/auth/registration`- регистрация, выдается JWT с ROLE_SUBSCRIBER 
+`POST` `http://localhost:8084/auth/registration` - регистрация, выдается JWT с ROLE_SUBSCRIBER 
 
-`POST` `http://localhost:8084/auth/login`- вход, получение JWT
+`POST` `http://localhost:8084/auth/login` - вход, получение JWT
 
-`POST` `http://localhost:8084/admin/change`- смена роли (ROLE_ADMIN)
+`POST` `http://localhost:8084/admin/change` - смена роли (ROLE_ADMIN)
 
-`GET` `http://localhost:8084/admin/users`- получение списка пользователей (ROLE_ADMIN)
+`GET` `http://localhost:8084/admin/users` - получение списка пользователей (ROLE_ADMIN)
 
 **News сервис 8081**
 
@@ -164,3 +188,17 @@
 `PUT` `http://localhost:8082/comments` - обновление комментария (ROLE_ADMIN или ROLE_SUBSCRIBER)
 
 `DELETE` `http://localhost:8082/comments/22` - удаление комментария (ROLE_ADMIN или ROLE_SUBSCRIBER)
+
+## Запуск микросервисов 
+1. В терминале перейти в директорию с файлом `docker-compose.yml`:
+   ```bash
+   cd /path/to/your/project
+2. Запуск контейнеров:
+   ```bash
+   docker-compose up --build
+3. Остановка:
+   ```bash
+   комбинация клавиш ctrl + c
+4. При необходимости очистка:
+   ```bash
+   docker-compose down
