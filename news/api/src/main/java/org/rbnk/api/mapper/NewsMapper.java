@@ -1,11 +1,12 @@
 package org.rbnk.api.mapper;
 
 import org.mapstruct.Mapper;
+import org.mapstruct.ReportingPolicy;
 import org.rbnk.api.dto.NewsDto;
 import org.rbnk.api.entity.NewsEntity;
 import org.rbnk.core.domain.News;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface NewsMapper {
 
     News entityToDomain(NewsEntity entity);
